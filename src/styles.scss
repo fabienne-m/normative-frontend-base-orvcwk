@@ -1,1 +1,53 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.d-flex {
+  display: flex;
+}
+.flex {
+  &-column {
+    flex-direction: column;
+  }
+
+  &-grow-1 {
+    flex-grow: 1;
+  }
+}
+.w-50 {
+  width: 50%;
+}
+.w-100 {
+  width: 100%;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.d-grid {
+  display: grid;
+}
+.grid {
+  &-dashboard {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "feelings-form feelings-table feelings-table"
+      "feelings-form feelings-table feelings-table"
+      "feelings-form feelings-table feelings-table";
+  }
+}
+.feelings-form {
+  grid-area: feelings-form;
+}
+.feelings-table {
+  grid-area: feelings-table;
+}
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.text-red {
+  color: red;
+}
+.text-green {
+  color: green;
+}
