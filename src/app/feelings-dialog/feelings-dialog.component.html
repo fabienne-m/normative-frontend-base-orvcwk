@@ -4,20 +4,20 @@
       <mat-card-title>Enter value</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form class="d-flex flex-column">
-        <mat-form-field class="">
-          <mat-label>Emoji</mat-label>
-          <input matInput [formControl]="emoji">
-        </mat-form-field>
-        <div class="d-flex">
-          <div class="d-flex justify-content-center flex-grow-1">
-            <button mat-button type="button" (click)="close()">OK</button>
-          </div>
-          <div class="d-flex justify-content-center flex-grow-1">
-            <button mat-button type="button" (click)="cancel()">CANCEL</button>
-          </div>
+      <mat-form-field class="">
+        <mat-label>Emoji</mat-label>
+        <mat-select [formControl]="emoji">
+          <mat-option *ngFor="let feeling of feelings" value="{{feeling.value}}">{{feeling.value}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="d-flex">
+        <div class="d-flex justify-content-center flex-grow-1">
+          <button mat-button type="button" (click)="close()">OK</button>
         </div>
-      </form>
+        <div class="d-flex justify-content-center flex-grow-1">
+          <button mat-button type="button" (click)="cancel()">CANCEL</button>
+        </div>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

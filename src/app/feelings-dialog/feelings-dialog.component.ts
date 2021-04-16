@@ -9,6 +9,14 @@ import emojiRegex from "emoji-regex";
   styleUrls: ["./feelings-dialog.component.css"]
 })
 export class FeelingsDialogComponent implements OnInit {
+  feelings = [
+    { value: "😀" },
+    { value: "🙂" },
+    { value: "😐" },
+    { value: "🙁" },
+    { value: "☹️" }
+  ];
+
   emoji = new FormControl("", [
     Validators.required,
     Validators.maxLength(2),
